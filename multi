@@ -1,0 +1,17 @@
+pipeline {
+	agent any
+	stages {
+		stage('build') {
+			steps {
+				sh 'python --version'
+				sh 'hello 1'
+			}
+		}
+		stage('deploy') {
+			steps {
+				sh 'java -version'
+				sh 'hello 2'
+			}
+		} 
+	}
+}
